@@ -1,0 +1,165 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.header__movie-finder {
+  color: darkblue;
+}
+
+/* 
+
+NAVIGATION
+
+ */
+
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+}
+
+.logo {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  padding: 16px;
+}
+
+/* Navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 300px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  font-size: 18px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #6b1fab;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links:after {
+  background-color: #0a1f44;
+  transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1);
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+  left: auto;
+  width: 0;
+  height: 3px;
+  z-index: 2;
+}
+
+.home-link {
+  padding-right: 6px;
+}
+
+.find-movie {
+  padding-right: 6px;
+}
+
+.nav-links a:hover {
+  color: #000; /* Black on hover */
+}
+
+/* Contact button */
+.contact-button a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #6c3acc; /* Purple background */
+  padding: 12px 40px;
+  border-radius: 20px; /* Rounded button */
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button a:hover {
+  background-color: #50138b; /* Darker purple on hover */
+}
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-landing {
+  font-size: 40px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.header-search {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.input-search {
+  width: 400px;
+  padding: 10px 15px;
+  height: 60px;
+  border: 2px solid;
+  border-radius: 50px;
+  font-size: 25px;
+  text-indent: 5px;
+  align-items: center;
+}
+
+.search-button {
+  width: 150px;
+  background-color: #6c3acc;
+  border: none;
+  border-radius: 50px;
+  margin-left: 10px;
+  padding: 12px 24px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(54, 54, 54, 0.408);
+}
+
+.search-button svg {
+  fill: white;
+  width: 20px;
+  height: 20px;
+}
+
+.search-button:hover {
+  background-color: #5b2eb3;
+}
+
+.search-button:active {
+  transform: scale(0.95);
+}
+
+.movienight-img {
+  margin-top: 80px;
+}
