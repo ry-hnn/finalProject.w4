@@ -1,14 +1,18 @@
-function search(event) {
-  event.preventDefault();
-  const loading = document.querySelector("search-btn--loading");
-  const success = document.querySelector(".modal__overlay--success");
+const searchButton = document.querySelector(".search-button");
+const loadingSpinner = document.querySelector(".fa-spinner");
+const searchIcon = document.querySelector(".search-icon"); // Select the magnifying glass icon
 
-  // Show loading spinner
-  loading.classList.add("visible");
+searchButton.addEventListener("click", () => {
+  // Show the spinner
+  loadingSpinner.classList.add("show-spinner");
+  // Hide the magnifying glass icon
+  searchIcon.classList.add("hide-icon");
 
-  // Simulate a search action or API call
+  // Simulate a loading process (e.g., a search operation)
   setTimeout(() => {
-    loading.classList.remove("visible");
-    success.classList.add("visible");
-  }, 2000); // 2-second delay for demonstration
-}
+    // Remove the class to hide the spinner after 2 seconds (or after the search is complete)
+    loadingSpinner.classList.remove("show-spinner");
+    // Show the magnifying glass icon again
+    searchIcon.classList.remove("hide-icon");
+  }, 2000); // Adjust the time as needed
+});

@@ -131,12 +131,18 @@ Landing page
   height: 60px;
   border: 2px solid;
   border-radius: 50px;
-  font-size: 25px;
+  font-size: 26px;
   text-indent: 5px;
   align-items: center;
 }
 
+.search-container {
+  display: flex;
+  position: relative;
+}
+
 .search-button {
+  position: relative;
   width: 150px;
   background-color: #6c3acc;
   border: none;
@@ -150,13 +156,14 @@ Landing page
   justify-content: center;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(54, 54, 54, 0.408);
+  overflow: hidden;
 }
 
-.search-button svg {
+.search-icon {
+  position: absolute;
   fill: white;
   width: 20px;
   height: 20px;
-  z-index: 1000;
 }
 
 .search-button:hover {
@@ -167,15 +174,21 @@ Landing page
   transform: scale(0.95);
 }
 
-.movienight-img {
-  margin-top: 80px;
-}
-
 .fa-spinner {
+  fill: white;
   width: 20px;
   height: 20px;
   animation: spinner 750ms infinite linear;
-  z-index: -1;
+  position: absolute;
+  display: none;
+}
+
+.show-spinner {
+  display: block;
+}
+
+.hide-icon {
+  display: none;
 }
 
 @keyframes spinner {
@@ -188,16 +201,7 @@ Landing page
   }
 }
 
-.search-btn--loading {
-  background-color: #5b2eb3;
-  font-size: 20px;
-  color: white;
-  z-index: -1;
-}
-
-.search-btn--success {
-  background-color: #5b2eb3;
-  font-weight: 700;
-  text-align: center;
-  z-index: -1;
+.movienight-img {
+  width: 600px;
+  margin-top: 80px;
 }
