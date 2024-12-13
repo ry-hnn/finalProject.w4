@@ -1,6 +1,6 @@
 function search(event) {
   event.preventDefault();
-  const loading = document.querySelector(".modal__overlay--loading");
+  const loading = document.querySelector("search-btn--loading");
   const success = document.querySelector(".modal__overlay--success");
 
   // Show loading spinner
