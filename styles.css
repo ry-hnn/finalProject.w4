@@ -85,7 +85,6 @@ body {
   color: #000; /* Black on hover */
 }
 
-/* Contact button */
 .contact-button a {
   text-decoration: none;
   color: #fff;
@@ -99,6 +98,12 @@ body {
 .contact-button a:hover {
   background-color: #50138b; /* Darker purple on hover */
 }
+
+/* 
+
+Landing page
+
+ */
 
 .landing-page {
   display: flex;
@@ -115,8 +120,9 @@ body {
 }
 
 .header-search {
-  font-size: 60px;
-  margin-bottom: 20px;
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 4px;
 }
 
 .input-search {
@@ -162,4 +168,22 @@ body {
 
 .movienight-img {
   margin-top: 80px;
+}
+
+.fa-spinner {
+  animation: spinner 750ms infinite linear;
+}
+
+.search-btn--loading {
+  background-color: #5b2eb3;
+  font-size: 80px;
+  color: white;
+  z-index: -1;
+}
+
+.search-btn--success {
+  background-color: #5b2eb3;
+  font-weight: 700;
+  text-align: center;
+  padding: 28px;
 }
