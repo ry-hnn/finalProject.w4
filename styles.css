@@ -17,16 +17,22 @@ NAVIGATION
  */
 
 /* General styles */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
 
 /* Navbar container */
+
 .navbar {
+  position: relative;
+  align-items: center;
+  z-index: 2;
+  position: relative;
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  padding: 40px 40px;
   background-color: #fff;
 }
 
@@ -38,7 +44,10 @@ body {
 }
 
 /* Navigation links */
+
 .nav-links {
+  font-weight: lighter;
+  letter-spacing: 1px;
   list-style: none;
   display: flex;
   align-items: center;
@@ -50,14 +59,14 @@ body {
 }
 
 .nav-links li {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #6b1fab;
-  font-weight: bold;
+  color: #000000;
   transition: color 0.3s ease;
+  font-weight: 600;
 }
 
 .nav-links:after {
@@ -82,21 +91,25 @@ body {
 }
 
 .nav-links a:hover {
-  color: #000; /* Black on hover */
+  color: #a574ff; /* Black on hover */
 }
 
 .contact-button a {
+  font-size: 16px;
+  font-weight: 600;
   text-decoration: none;
   color: #fff;
   background-color: #6c3acc; /* Purple background */
   padding: 12px 40px;
   border-radius: 20px; /* Rounded button */
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  letter-spacing: 1px;
+  transition: 1s ease;
 }
 
 .contact-button a:hover {
-  background-color: #50138b; /* Darker purple on hover */
+  background-color: #a574ff; /* Darker purple on hover */
+  transition: 0.5s ease-out;
+  font-weight: 700;
 }
 
 /* 
@@ -204,4 +217,45 @@ Landing page
 .movienight-img {
   width: 600px;
   margin-top: 80px;
+}
+
+/* Find your movie  */
+
+.overlay {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.progress-bar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.progress-bar-track {
+  left: -150%;
+  animation: b 2s linear infinite;
+}
+
+/* Search */
+
+.search {
+  display: flex;
+  position: absolute;
+  padding: 40px 20px;
+  flex-direction: column;
+}
+
+.filter {
+  padding: 0 20px;
 }
