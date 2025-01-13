@@ -1,24 +1,3 @@
-// Select the navigation links
-const homeLink = document.querySelector(".home-link a");
-const findMovieLink = document.querySelector(".find-movie a");
-const contactButton = document.querySelector(".contact-button a");
-
-// Add event listeners to handle routing
-homeLink.addEventListener("click", (event) => {
-  event.preventDefault(); // Prevent default anchor behavior
-  window.location.href = "/index.html"; // Redirect to the home page
-});
-
-findMovieLink.addEventListener("click", (event) => {
-  event.preventDefault(); // Prevent default anchor behavior
-  window.location.href = "/find-movie.html"; // Redirect to the find movie page
-});
-
-contactButton.addEventListener("click", (event) => {
-  event.preventDefault(); // Prevent default anchor behavior
-  window.location.href = "/contact.html"; // Redirect to the contact page
-});
-
 const searchButton = document.querySelector(".search-button");
 const loadingSpinner = document.querySelector(".fa-spinner");
 const searchIcon = document.querySelector(".search-icon"); // Select the magnifying glass icon
