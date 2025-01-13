@@ -8,13 +8,11 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 
-
-<body>
+<body class="find-movie-page">
     <div id="app">
-
         <div class="navbar">
             <div class="logo">
-                <img src="./assets/SRtextlogo.svg" alt="Stream Reel Logo" />
+                <img src="./assets/SRtextlogoWT.svg" alt="Stream Reel Logo" />
             </div>
             <ul class="nav-links">
                 <li class="home-link"><a href="#home">Home</a></li>
@@ -23,12 +21,18 @@
             <div class="contact-button">
                 <a href="#contact">Contact</a>
             </div>
+            <div class="background-img">
+
+            </div>
         </div>
+
+
+
+
         <section>
+
             <div class="landing-page">
-                <div class="header-landing">
-                    <h1 class="header-search">Browse for movies</h1>
-                </div>
+
 
 
                 <div class="search-container">
@@ -48,28 +52,41 @@
                         </svg>
                     </button>
                 </div>
-                <div>
-                    <img class="movienight-img" src="./assets/undraw_movie_night_re_9umk.svg" alt="">
-                </div>
-                <div class="user-list"></div>
-            </div>
-
-        </section>
 
 
-        <section id="search">
-            <div class="progress-bar">
-                <div class="progress-bar-track"></div>
-                <div class="progress-bar-fill"></div>
-                <div class="progress-bar-buffer"></div>
             </div>
             <div id="filter" class="content-wrapper">
-                <h1 class="search-info"></h1>
             </div>
-        </section>
-        <script src="./index.js"></script>
-
     </div>
+    </section>
+    </section>
+    <section class="results">
+        <div class="user-list"></div>
+    </section>
+
+
+
+
+    <section id="find-movie-section" style="display: none;">
+        <div class="progress-bar">
+            <div class="progress-bar-track"></div>
+            <div class="progress-bar-fill"></div>
+            <div class="progress-bar-buffer"></div>
+        </div>
+        <div class="content-wrapper">
+            <h1 class="search-info"></h1>
+        </div>
+    </section>
+    <script src="./index.js"></script>
+    </div>
+
+
+    <svg class="fa-spinner" xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+        <path
+            d="M304 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm0 416a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM48 304a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm464-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM142.9 437A48 48 0 1 0 75 369.1 48 48 0 1 0 142.9 437zm0-294.2A48 48 0 1 0 75 75a48 48 0 1 0 67.9 67.9zM369.1 437A48 48 0 1 0 437 369.1 48 48 0 1 0 369.1 437z" />
+    </svg>
+
 </body>
 
 </html>

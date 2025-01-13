@@ -1,5 +1,3 @@
-// API KEY 1 "http://www.omdbapi.com/?i=tt3896198&apikey=31ebf24f"
-
 // Select the navigation links
 const homeLink = document.querySelector(".home-link a");
 const findMovieLink = document.querySelector(".find-movie a");
@@ -24,12 +22,24 @@ contactButton.addEventListener("click", (event) => {
 const searchButton = document.querySelector(".search-button");
 const loadingSpinner = document.querySelector(".fa-spinner");
 const searchIcon = document.querySelector(".search-icon"); // Select the magnifying glass icon
+const searchInput = document.querySelector(".input-search"); // Select the search input
+const movieListEl = document.querySelector(".user-list"); // Select the container to display movie results
 
-searchButton.addEventListener("click", () => {
+searchButton.addEventListener("click", async () => {
   // Show the spinner
   loadingSpinner.classList.add("show-spinner");
   // Hide the magnifying glass icon
   searchIcon.classList.add("hide-icon");
+
+  const searchTerm = searchInput.value.trim();
+  if (searchTerm) {
+    try {
+      const movies = await fetchMovies(searchTerm);
+      displayMovies(movies);
+    } catch (error) {
+      console.error("Error fetching movies:", error);
+    }
+  }
 
   // Simulate a loading process (e.g., a search operation)
   setTimeout(() => {
@@ -40,32 +50,28 @@ searchButton.addEventListener("click", () => {
   }, 2000); // Adjust the time as needed
 });
 
-const userListEl = document.querySelector(".user-list");
-
-async function main() {
-  const users = await fetch(
-    "http://www.omdbapi.com/?i=tt3896198&apikey=31ebf24f"
+async function fetchMovies(searchTerm) {
+  const apiKey = "31ebf24f"; // Your OMDB API key
+  const response = await fetch(
+    `http://www.omdbapi.com/?s=${searchTerm}&apikey=${apiKey}`
   );
-  const usersData = await users.json();
-  userListEl.innerHTML = usersData.map((user) => userHTML(user)).join("");
+  const data = await response.json();
+  return data.Search || [];
 }
 
-main();
-
-function showUserPosts(id) {
-  localStorage.setItem("id", id);
-  window.location.href = `${window.location.origin}/user.html`;
-}
-
-function userHTML(user) {
-  return `<div class="user-card" onclick="showUserPosts(${user.id})">
-    <div class="user-card__container">
-              <h3>${user.name}</h4>
-              <p><b>Email:</b> ${user.email}</p>
-              <p><b>Phone:</b> ${user.phone}</p>
-              <p><b>Website:</b> <a href="https://${user.website}" target="_blank">
-               ${user.website}
-               </a></p>
-          </div>
-      </div>`;
+function displayMovies(movies) {
+  movieListEl.innerHTML = movies
+    .map(
+      (movie) => `
+    <div class="user-card">
+      <div class="user-card__container">
+        <h3>${movie.Title}</h3>
+        <p><b>Year:</b> ${movie.Year}</p>
+        <p><b>Type:</b> ${movie.Type}</p>
+        <img src="${movie.Poster}" alt="${movie.Title} Poster">
+      </div>
+    </div>
+  `
+    )
+    .join("");
 }
