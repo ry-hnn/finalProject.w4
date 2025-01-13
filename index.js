@@ -32,7 +32,7 @@ searchButton.addEventListener("click", async () => {
 async function fetchMovies(searchTerm) {
   const apiKey = "31ebf24f"; // Your OMDB API key
   const response = await fetch(
-    `http://www.omdbapi.com/?s=${searchTerm}&apikey=${apiKey}`
+    `https://www.omdbapi.com/?s=${searchTerm}&apikey=${apiKey}`
   );
   const data = await response.json();
   return data.Search || [];
