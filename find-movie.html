@@ -52,22 +52,29 @@
     </section>
 
     <section class="results">
+        <div class="results-container">
+            <div class="search-results">
+                <h1 class="search-info">Search results :</h1>
+                <div class="-filter">
+                    <h2 class="release-year">Year of release : <span class="purple-text" id="year-range">1970 -
+                            2025</span></h2>
+                    <div class="slider-wrapper">
+                        <div class="slider"></div>
+                        <input type="range" id="min-year" name="min-year" min="1970" max="2025" value="1970"
+                            class="slider">
+                        <input type="range" id="max-year" name="max-year" min="1970" max="2025" value="2025"
+                            class="slider">
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="user-list"></div>
     </section>
 
 
 
 
-    <section id="find-movie-section" style="display: none;">
-        <div class="progress-bar">
-            <div class="progress-bar-track"></div>
-            <div class="progress-bar-fill"></div>
-            <div class="progress-bar-buffer"></div>
-        </div>
-        <div class="content-wrapper">
-            <h1 class="search-info"></h1>
-        </div>
-    </section>
+
     <script src="./index.js"></script>
     </div>
 

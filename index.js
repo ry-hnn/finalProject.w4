@@ -54,3 +54,41 @@ function displayMovies(movies) {
     )
     .join("");
 }
+
+// Get the range sliders and the year range display
+const minYearSlider = document.getElementById("min-year");
+const maxYearSlider = document.getElementById("max-year");
+const yearRangeDisplay = document.getElementById("year-range");
+
+// Function to update the year range display
+function updateYearRange() {
+  const minYear = minYearSlider.value;
+  const maxYear = maxYearSlider.value;
+  yearRangeDisplay.textContent = `${minYear} - ${maxYear}`;
+}
+
+// Function to enforce the min and max values
+function enforceSliderRules() {
+  const minYear = parseInt(minYearSlider.value);
+  const maxYear = parseInt(maxYearSlider.value);
+
+  // Ensure the min slider doesn't exceed the max slider
+  if (minYear > maxYear) {
+    minYearSlider.value = maxYear;
+  }
+
+  // Ensure the max slider doesn't go below the min slider
+  if (maxYear < minYear) {
+    maxYearSlider.value = minYear;
+  }
+
+  // Update the displayed year range
+  updateYearRange();
+}
+
+// Event listeners for slider changes
+minYearSlider.addEventListener("input", updateYearRange);
+maxYearSlider.addEventListener("input", updateYearRange);
+
+// Initial call to set the default range
+updateYearRange();
