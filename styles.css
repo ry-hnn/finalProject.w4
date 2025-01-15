@@ -14,6 +14,10 @@
   color: #6c3acc;
 }
 
+.bold-text {
+  font-weight: 800;
+}
+
 /* 
 
 NAVIGATION
@@ -73,6 +77,7 @@ body {
 }
 
 .nav-links a {
+  font-size: 18px;
   text-decoration: none;
   color: #000000;
   transition: color 0.3s ease;
@@ -101,7 +106,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #a574ff; /* Black on hover */
+  color: #a574ff;
 }
 
 .contact-button a {
@@ -109,15 +114,15 @@ body {
   font-weight: 600;
   text-decoration: none;
   color: #fff;
-  background-color: #6c3acc; /* Purple background */
+  background-color: #6c3acc;
   padding: 12px 40px;
-  border-radius: 20px; /* Rounded button */
+  border-radius: 20px;
   letter-spacing: 1px;
   transition: 1s ease;
 }
 
 .contact-button a:hover {
-  background-color: #a574ff; /* Darker purple on hover */
+  background-color: #a574ff;
   transition: 0.5s ease-out;
   font-weight: 700;
 }
@@ -136,21 +141,31 @@ Landing page
   align-items: center;
 }
 
+.header {
+  color: black;
+}
+
 .header-landing {
   font-size: 40px;
   margin-top: 60px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .header-search {
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 600;
   margin-bottom: 4px;
-}
-
-.header-search2 {
-  color: white;
-  font-size: 36px;
+  margin-top: 8px;
 }
 
 .input-search {
@@ -179,6 +194,24 @@ Landing page
   position: relative;
   width: 150px;
   background-color: #6c3acc;
+  border: none;
+  border-radius: 50px;
+  margin-left: 10px;
+  padding: 12px 24px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(54, 54, 54, 0.408);
+  overflow: hidden;
+}
+
+.search-button2 {
+  position: relative;
+  width: 150px;
+  background-color: #ffffff;
   border: none;
   border-radius: 50px;
   margin-left: 10px;
@@ -255,12 +288,20 @@ Landing page
   z-index: -1;
 }
 
+.browse-movies {
+  font-size: 60px;
+  color: rgb(255, 255, 255);
+  z-index: 2;
+  margin-bottom: 16px;
+  margin-top: 30px;
+}
+
 .user-list {
-  position: relative; /* Ensures it stays in the normal document flow */
-  z-index: 1; /* Ensures it appears above the background image */
-  margin-top: 80px; /* Adds space between the search bar and the results */
-  padding: 20px; /* Adds padding inside the container */
-  border-radius: 10px; /* Optional: Rounds the corners */
+  position: relative;
+  z-index: 1;
+  margin-top: 80px;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .progress-bar {
@@ -299,11 +340,11 @@ Landing page
 
 .results {
   position: relative;
-  z-index: 1; /* Ensures it appears above the background image */
-  margin-top: 100px; /* Adds space between the search bar and the results */
-  padding: 20px; /* Adds padding inside the container */
-  border-radius: 10px; /* Optional: Rounds the corners */
-  max-width: 800px; /* Optional: Limits the width of the results container */
+  z-index: 1;
+  margin-top: 100px;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -340,23 +381,23 @@ input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   width: 20px;
   height: 20px;
-  background: #6c3acc; /* Purple color */
+  background: #6c3acc;
   border-radius: 50%;
   cursor: pointer;
   pointer-events: auto;
   position: relative;
-  z-index: 3; /* Ensure thumbs are above the track */
+  z-index: 3;
 }
 
 input[type="range"]::-moz-range-thumb {
   width: 20px;
   height: 20px;
-  background: #6c3acc; /* Purple color */
+  background: #6c3acc;
   border-radius: 50%;
   cursor: pointer;
   pointer-events: auto;
   position: relative;
-  z-index: 3; /* Ensure thumbs are above the track */
+  z-index: 3;
 }
 
 .slider-wrapper::before {
@@ -366,7 +407,7 @@ input[type="range"]::-moz-range-thumb {
   left: var(--min-thumb-position, 0);
   right: calc(100% - var(--max-thumb-position, 100%));
   height: 8px;
-  background: #b3a9bb; /* Purple color */
+  background: #b3a9bb;
   border-radius: 5px;
   transform: translateY(-50%);
   z-index: 1;
@@ -407,7 +448,7 @@ input[type="range"]::-moz-range-thumb {
 .user-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Adds space between movie cards */
+  gap: 20px;
   justify-content: center;
 }
 
@@ -416,7 +457,7 @@ input[type="range"]::-moz-range-thumb {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 15px;
-  width: 200px; /* Adjust the width as needed */
+  width: 200px;
   text-align: center;
 }
 
